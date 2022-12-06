@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.geometric-form {
+  height: 70px;
+  width: 70px;
+  background-image: linear-gradient(
+    to right bottom,
+    #2700b7,
+    #006aff,
+    #009df6,
+    #00c8b0,
+    #12eb5d
+  );
+  animation: geometric-form-animation 1s alternate infinite;
+  clip-path: polygon(
+    50% 0%,
+    83% 12%,
+    100% 43%,
+    94% 78%,
+    68% 100%,
+    32% 100%,
+    6% 78%,
+    0% 43%,
+    17% 12%
+  );
+  box-shadow: 2px 2px 31px 5px rgba(0, 0, 0, 0.71);
+}
+
+@keyframes geometric-form-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
